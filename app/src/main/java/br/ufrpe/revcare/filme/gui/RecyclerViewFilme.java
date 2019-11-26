@@ -3,8 +3,6 @@ package br.ufrpe.revcare.filme.gui;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -26,7 +24,7 @@ public class RecyclerViewFilme extends AppCompatActivity implements AdapterView.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view_filmes);
         getSupportActionBar().hide();
-        initProfissionais();
+        initFilmes();
         FilmeDAO dao = new FilmeDAO(getApplicationContext());
         zerarArrays();
         filmes = dao.getAllFilmes();
@@ -47,7 +45,7 @@ public class RecyclerViewFilme extends AppCompatActivity implements AdapterView.
     }
 
 
-    private void initProfissionais() {
+    private void initFilmes() {
       FilmeDAO dao = new FilmeDAO(getApplicationContext());
       filmes = dao.getAllFilmes();
       adicionaNoArray(dao, filmes);
