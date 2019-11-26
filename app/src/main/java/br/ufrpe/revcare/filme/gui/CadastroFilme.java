@@ -33,6 +33,7 @@ public class CadastroFilme extends AppCompatActivity implements AdapterView.OnIt
             public void onClick(View view) {
                 try {
                     cadastrar();
+                    finish();
                 } catch (Exception e) {
                     e.printStackTrace();
                     Toast.makeText(getApplicationContext(),"Não foi possível cadastro.", Toast.LENGTH_LONG).show();
