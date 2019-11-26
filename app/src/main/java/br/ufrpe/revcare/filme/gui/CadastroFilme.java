@@ -49,7 +49,7 @@ public class CadastroFilme extends AppCompatActivity implements AdapterView.OnIt
             FilmeServices services = new FilmeServices(getBaseContext());
             services.cadastrar(filme);
             Toast.makeText(getApplicationContext(),"Filme cadastrado com sucesso.", Toast.LENGTH_LONG).show();
-            startActivity(new Intent(CadastroFilme.this, MainActivity.class));
+            startActivity(new Intent(CadastroFilme.this, RecyclerViewFilme.class));
         }
     }
 

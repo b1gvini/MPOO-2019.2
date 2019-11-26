@@ -27,46 +27,46 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
-        Button btnEntrar = findViewById(R.id.botaoEntrar);
-        Button btnEsqueceuSenha = findViewById(R.id.esqueceuSenha);
-        Button btnCadastrar = findViewById(R.id.botaoCadastro);
+//        Button btnEntrar = findViewById(R.id.botaoEntrar);
+//        Button btnEsqueceuSenha = findViewById(R.id.esqueceuSenha);
+//        Button btnCadastrar = findViewById(R.id.botaoCadastro);
         Button btnVini = findViewById(R.id.botaoVini);
         Button btnViniAll = findViewById(R.id.botaoViniExibir);
-        final Switch switchUsuarioProfissional = findViewById(R.id.switchUsuarioProfissional);
-        final EditText campoEmail = findViewById(R.id.caixatxtEmailLogin);
-        final EditText campoSenha = findViewById(R.id.caixatxtSenhaLogin);
+//        final Switch switchUsuarioProfissional = findViewById(R.id.switchUsuarioProfissional);
+//        final EditText campoEmail = findViewById(R.id.caixatxtEmailLogin);
+//        final EditText campoSenha = findViewById(R.id.caixatxtSenhaLogin);
 
-        btnCadastrar.setOnClickListener(new View.OnClickListener() {
+//        btnCadastrar.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                if (switchUsuarioProfissional.isChecked()) {
+//                    finish();
+//                    startActivity(new Intent(MainActivity.this, CadastroProfissional.class));
+//                } else {
+//                    finish();
+//                    startActivity(new Intent(MainActivity.this, CadastroUsuario.class));
+//                }
+//            }
+//
+//        });
+//        btnEsqueceuSenha.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//                startActivity(new Intent(MainActivity.this, EsqueceuSenha.class));
+//            }
+//
+//        });
 
-            @Override
-            public void onClick(View v) {
-                if (switchUsuarioProfissional.isChecked()) {
-                    finish();
-                    startActivity(new Intent(MainActivity.this, CadastroProfissional.class));
-                } else {
-                    finish();
-                    startActivity(new Intent(MainActivity.this, CadastroUsuario.class));
-                }
-            }
 
-        });
-        btnEsqueceuSenha.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                finish();
-                startActivity(new Intent(MainActivity.this, EsqueceuSenha.class));
-            }
-
-        });
-
-
-        btnEntrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                entrar(switchUsuarioProfissional, campoEmail, campoSenha);
-            }
-        });
+//        btnEntrar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                entrar(switchUsuarioProfissional, campoEmail, campoSenha);
+//            }
+//        });
         btnVini.setOnClickListener(new View.OnClickListener() {
 
             @Override

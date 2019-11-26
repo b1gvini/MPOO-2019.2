@@ -36,9 +36,21 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/filmesRecycler"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"/>
+
+    <Button
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="34dp"
+        android:textSize="29sp"
+        android:layout_marginBottom="59dp"
+        android:background="@drawable/button"
+        android:text="+"
+        android:id="@+id/btnadicionar"
+        android:textColor="#FFFFFF" />
 
 
 </RelativeLayout>

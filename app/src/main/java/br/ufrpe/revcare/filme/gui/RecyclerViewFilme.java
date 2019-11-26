@@ -1,8 +1,10 @@
 package br.ufrpe.revcare.filme.gui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,6 +16,8 @@ import java.util.List;
 import br.ufrpe.revcare.R;
 import br.ufrpe.revcare.filme.dominio.Filme;
 import br.ufrpe.revcare.filme.persistencia.FilmeDAO;
+import br.ufrpe.revcare.usuario.gui.HomeUsuario;
+import br.ufrpe.revcare.usuario.gui.RecyclerViewUsuario;
 
 public class RecyclerViewFilme extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private ArrayList<String> mTitulo = new ArrayList<>();
@@ -29,6 +33,13 @@ public class RecyclerViewFilme extends AppCompatActivity implements AdapterView.
         zerarArrays();
         filmes = dao.getAllFilmes();
         adicionaNoArray(dao, filmes);
+        Button btnAdicionar = findViewById(R.id.btnadicionar);
+        btnAdicionar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecyclerViewFilme.this, CadastroFilme.class));
+            }
+        });
         initRecyclerView();
 
     }
